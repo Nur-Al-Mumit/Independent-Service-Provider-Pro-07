@@ -1,0 +1,28 @@
+.nav-container{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-heading {
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+  }
+.nav-container a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid black;
+    transition: 300ms;
+  }
+  .nav-container a:hover {
+    color: skyblue;
+    border: 2px solid skyblue;
+  }

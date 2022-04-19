@@ -23,10 +23,6 @@ const Banner = () => {
             src="https://manofmany.com/wp-content/uploads/2019/12/Bodyweight-Exercises.jpg"
             alt="First slide"
           />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -34,11 +30,6 @@ const Banner = () => {
             src="https://www.muscleandfitness.com/wp-content/uploads/2019/04/triceps-pushup-lean-muscular.jpg?quality=86&strip=all"
             alt="Second slide"
           />
-
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -46,13 +37,6 @@ const Banner = () => {
             src="https://media.gq-magazine.co.uk/photos/5d139941bc4bf6f0227f07e9/master/pass/IdoPortal-GQ-17Mar15-pr_b.jpg"
             alt="Third slide"
           />
-
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </div>

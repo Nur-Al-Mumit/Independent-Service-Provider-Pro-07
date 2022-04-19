@@ -1,17 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import { sendEmailVerification } from "firebase/auth";
 
 const Register = () => {
-  const [
-    createUserWithEmailAndPassword,
-    user,
-    loading,
-    error,
-  ] = useCreateUserWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
 
   const emailRef = useRef("");
   const passwordRef = useRef("");
@@ -26,7 +23,11 @@ const Register = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     // const name = nameRef.current.value;
-    createUserWithEmailAndPassword(email, password)
+    createUserWithEmailAndPassword(email, password);
+    emailVarification();
+  };
+  const emailVarification = () => {
+    sendEmailVerification(auth.currentUser).then(() => {});
   };
   return (
     <Form onSubmit={handleSubmit} className="mt-5 w-50 mx-auto">
@@ -46,9 +47,6 @@ const Register = () => {
           type="password"
           placeholder="Password"
         />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
       </Form.Group>
       <p>
         Already have an account?
